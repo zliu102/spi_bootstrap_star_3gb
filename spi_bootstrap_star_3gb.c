@@ -227,7 +227,7 @@ Datum spi_bootstrap2_star_3gb(PG_FUNCTION_ARGS) {
     MemoryContextSwitchTo(oldcontext); //test
 
 
-    snprintf(sql, sizeof(sql), "select * from reservoir_sampler_tpch_3gb(%s,'%s','%s','%s');",sampleSize,tablename,otherAttribue,groupby);
+    snprintf(sql, sizeof(sql), "select * from reservoir_sampler_stars_3gb(%s,'%s','%s','%s');",sampleSize,tablename,otherAttribue,groupby);
     elog(INFO, "SPI query -- %s", sql);
     ret = SPI_execute(sql, true, 0);
     if (ret != SPI_OK_SELECT) {
