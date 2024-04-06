@@ -157,7 +157,7 @@ static int findOrCreateGroup(GroupsContext *context, char* mjd, char* fiberid, c
     last_mjd = mjd;
     last_fiberid = fiberid;
     last_linesigma = linesigma;
-    //last_groupIndex = newIndex;
+    last_groupIndex = newIndex;
 
     context->numGroups++;
     return newIndex;
@@ -301,8 +301,8 @@ Datum spi_bootstrap2_star_3gb(PG_FUNCTION_ARGS) {
         //double discount = strtod(value7, NULL);
         //int partkey = atoi(value4);
         //int linenumber = atoi(value8);
-        elog(INFO, "plate is %d",value4);
-        elog(INFO, "linenpixleft is %d",value5);
+        //elog(INFO, "plate is %d",value4);
+        //elog(INFO, "linenpixleft is %d",value5);
         
         int groupIndex = findOrCreateGroup(&groupsContext, value1, value2,value3);
         elog(INFO, "groupIndex is %d",groupIndex);
