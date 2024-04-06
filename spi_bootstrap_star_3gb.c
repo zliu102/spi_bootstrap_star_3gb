@@ -301,10 +301,11 @@ Datum spi_bootstrap2_star_3gb(PG_FUNCTION_ARGS) {
         //double discount = strtod(value7, NULL);
         //int partkey = atoi(value4);
         //int linenumber = atoi(value8);
-        //elog(INFO, "l_suppkey is %s",value1);
-        //elog(INFO, "l_partkey is %s",value2);
+        elog(INFO, "plate is %d",value4);
+        elog(INFO, "linenpixleft is %d",value5);
         
         int groupIndex = findOrCreateGroup(&groupsContext, value1, value2,value3);
+        elog(INFO, "groupIndex is %d",groupIndex);
         if (groupIndex != -1) { 
             addAttributeToGroup(&groupsContext.groups[groupIndex],plate,linenpixleft,linenpixright);
             //addAttributeToGroup(&groupsContext.groups[groupIndex],quantity);
