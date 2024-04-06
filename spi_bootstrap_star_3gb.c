@@ -305,7 +305,7 @@ Datum spi_bootstrap2_star_3gb(PG_FUNCTION_ARGS) {
         //elog(INFO, "linenpixleft is %d",value5);
         
         int groupIndex = findOrCreateGroup(&groupsContext, value1, value2,value3);
-        elog(INFO, "groupIndex is %d",groupIndex);
+        //elog(INFO, "groupIndex is %d",groupIndex);
         if (groupIndex != -1) { 
             addAttributeToGroup(&groupsContext.groups[groupIndex],plate,linenpixleft,linenpixright);
             //addAttributeToGroup(&groupsContext.groups[groupIndex],quantity);
