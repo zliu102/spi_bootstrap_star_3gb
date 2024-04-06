@@ -327,7 +327,7 @@ Datum spi_bootstrap2_star_3gb(PG_FUNCTION_ARGS) {
         //float4 stddev_l_quantity = calculateStandardDeviation(group->quantities, group->count, avg_l_quantity);
         float4 avg_linenpixleft = calculateRandomSampleAverage(group->linenpixlefts, group->count);
         //float4 stddev_l_partkey = calculateStandardDeviation(group->partkeys, group->count, avg_l_partkey);
-        float4 avg_linenpixright = calculateRandomSampleAverage(group->linenpixright, group->count);
+        float4 avg_linenpixright = calculateRandomSampleAverage(group->linenpixrights, group->count);
         //float4 stddev_l_orderkey = calculateStandardDeviation(group->orderkeys, group->count, avg_l_orderkey);
         //float4 avg_l_extendedprice = calculateRandomSampleAverage(group->extendedprices, group->count);
         //float4 stddev_l_extendedprice = calculateStandardDeviation(group->extendedprices, group->count, avg_l_extendedprice);
